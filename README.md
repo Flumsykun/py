@@ -14,7 +14,7 @@ In this game, you control a snake that moves around the screen, eating food to g
 1. Clone this repository to your local machine:
 
     ```bash
-    git clone https://github.com/yourusername/python-snake-game.git
+    git clone https://github.com/Flumsykun/py.git
     ```
 
 2. Navigate to the project directory:
