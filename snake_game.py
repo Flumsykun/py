@@ -204,7 +204,7 @@ while True:
   wn.update()
 
     #Check for a collision with the border
-    if (
+  if (
         head.xcor() > 290
         or head.xcor() < -290
         or head.ycor() > 290
@@ -231,7 +231,7 @@ while True:
         pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
 
     # Check for a collision with the food
-    if head.distance(food) < 20:
+  if head.distance(food) < 20:
       #Move the food to a random position
       x = random.randint(-290, 290)
       y = random.randint(-290, 290)
@@ -270,3 +270,32 @@ while True:
           segments[0].goto(x, y)
 
       move()
+      #Handle Collisions with the snake's body,Update the score and high score
+
+      while True:
+        ...
+
+        # Check for head collisions with the snake's body
+        for segment in segments:
+          if segment.distance(head) <20:
+            time.sleep(1)
+            head.goto(0, 0)
+            head.direction = "Stop"
+
+          #Hide the segments
+          for segements in segments:
+            segment.goto(1000, 1000)
+
+            #clear the segments list
+            segments.clear()
+
+            #reset the score
+            score = 0
+
+            #reset the delay
+            delay = 0.1
+
+            pen.clear
+            pen.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
+
+         time.sleep(delay)
